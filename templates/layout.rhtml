@@ -2,11 +2,21 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
-    <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-    <title><%= title %></title>
+    <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
+    <title>
+        <% if @path == 'index' %>
+            Jason Wells
+        <% elsif @path.split('/').compact.length == 4 %>
+            <%= title %> - Jason Wells
+        <% else %>
+            <%= @path.capitalize.gsub(/[-]/, ' ') %> - Jason Wells
+        <% end %>
+    </title>
+    <meta name="description" content="<%= @context[:description] || 'A blog by Jason Wells' %>">
   </head>
   <body>
+    <h1><a href="/" alt="jasonawells.com" rel="home">jasonawells.com</a></h1>
     <section>
       <%= yield %> 
     </section>
