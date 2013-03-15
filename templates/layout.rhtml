@@ -16,7 +16,16 @@
     <meta name="description" content="<%= @context[:description] || 'A blog by Jason Wells' %>">
 </head>
 <body>
-    <h1><a href="/" alt="jasonawells.com" rel="home">Jason Wells</a></h1>
+    <header>
+        <h1 id="sitetitle"><a href="/" alt="jasonawells.com" rel="home">Jason Wells</a></h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/colophon" alt="colophon" rel="colophon">Colophon</a></li>
+            <li><a href="/archives" alt="archives" rel="archives">Archive</a></li>
+            <li><a href="/contact" alt="contact" rel="contact">Contact</a></li>
+        </ul>
+    </nav>
     <div id="findme">
     <ul>
         <li><a href="http://github.com/jasonwells"><img src="/images/github_alt.png" alt="github"></a></li>
@@ -25,7 +34,7 @@
         <li><a href="http://facebook.com/flipstock"><img src="/images/facebook.png" alt="facebook"></a></li>
     </ul>
     </div>
-    <section>
+    <section id="main">
         <%= yield %> 
     </section>
     <footer>

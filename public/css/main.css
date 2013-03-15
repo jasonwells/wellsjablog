@@ -1,25 +1,44 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|Inconsolata|Cabin+Sketch);
 html {
-    margin: 0;
 }
 body {
-  margin: 0 auto;
-  width: 720px;
+    margin: 0 auto;
+    width: 720px;
 }
 h1 {
     font-family: Lato, Helvetica, Arial, sans-serif;
 }
+h1 a {
+    color: black;
+}
 header, footer, section, article {
 }
+#sitetitle a {
+    text-decoration: none;
+    color: #000;
+}
+#sitetitle a:hover {
+    text-decoration: underline;
+}
+nav {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+}
+nav ul {
+    padding-left: 0;
+}
+nav ul li {
+    display: inline;
+    list-style: none;
+}
 #findme {
-/*    float: right;
-*/}
-#findme li {
-/*    list-style: none;
-    float: left;
-    padding-left: 0px;
-    padding-right: 0px;
-*/}
+}
+#findme ul {
+    padding-left: 0;
+}
+#findme ul li {
+    display: inline;
+    list-style: none;
+}
 #content {
 }
 #caption {
