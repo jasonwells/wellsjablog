@@ -1,28 +1,36 @@
 <!doctype html>
 <html>
-  <head>
+<head>
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> 
     <title>
         <% if @path == 'index' %>
-            Jason Wells
+        Jason Wells
         <% elsif @path.split('/').compact.length == 4 %>
-            <%= title %> - Jason Wells
+        <%= title %> - Jason Wells
         <% else %>
-            <%= @path.capitalize.gsub(/[-]/, ' ') %> - Jason Wells
+        <%= @path.capitalize.gsub(/[-]/, ' ') %> - Jason Wells
         <% end %>
     </title>
     <meta name="description" content="<%= @context[:description] || 'A blog by Jason Wells' %>">
-  </head>
-  <body>
-    <h1><a href="/" alt="jasonawells.com" rel="home">jasonawells.com</a></h1>
+</head>
+<body>
+    <h1><a href="/" alt="jasonawells.com" rel="home">Jason Wells</a></h1>
+    <div id="findme">
+    <ul>
+        <li><a href="http://github.com/jasonwells"><img src="/images/github_alt.png" alt="github"></a></li>
+        <li><a href="http://twitter.com/wellsja"><img src="/images/twitter.png" alt="twitter"></a></li>
+        <li><a href="https://plus.google.com/102512603346726762603"><img src="/images/google_plus.png" alt="google+"></a></li>
+        <li><a href="http://facebook.com/flipstock"><img src="/images/facebook.png" alt="facebook"></a></li>
+    </ul>
+    </div>
     <section>
-      <%= yield %> 
+        <%= yield %> 
     </section>
     <footer>
-      powered by <a href="http://cloudhead.io/toto">toto</a>
+        <p>powered by <a href="http://cloudhead.io/toto">toto</a></p>
     </footer>
-  </body>
+</body>
 </html>
 

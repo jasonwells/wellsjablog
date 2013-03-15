@@ -1,4 +1,3 @@
-
 require 'toto'
 require 'rack-rewrite'
 
@@ -21,10 +20,10 @@ toto = Toto::Server.new do
     set :author,    'Jason Wells'                             # blog author
     set :title,     'jasonawells.com'                         # site title
   # set :root,      "index"                                   # page to load on /
-    set :date,      lambda {|now| now.strftime("%Y/%m/%d") }  # date format for articles
+    set :date,      lambda {|now| now.strftime("%Y-%m-%d") }  # date format for articles
     set :markdown,  :smart                                    # use markdown + smart-mode
   # set :disqus,    false                                     # disqus id, or false
-    set :summary,   :max => 1000, :delim => /~/                # length of article summary and delimiter
+    set :summary,   :max => 1000, :delim => /~/               # length of article summary and delimiter
   # set :ext,       'txt'                                     # file extension for articles
   # set :cache,      28800                                    # cache duration, in seconds
     set :url,       'http://jasonawells.com/'
