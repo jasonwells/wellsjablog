@@ -4,6 +4,7 @@ html {
 body {
     margin: 0 auto;
     width: 720px;
+    font-family: Helvetica, Arial, sans-serif;
 }
 h1 {
     font-family: Lato, Helvetica, Arial, sans-serif;
