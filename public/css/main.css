@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|Inconsolata|Cabin+Sketch);
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro);
 html {
 }
 body {
@@ -7,7 +7,7 @@ body {
     font-family: Helvetica, Arial, sans-serif;
 }
 h1 {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 h1 a {
     color: black;
@@ -17,12 +17,13 @@ header, footer, section, article {
 #sitetitle a {
     text-decoration: none;
     color: #000;
+    font-size: 40px;
 }
 #sitetitle a:hover {
     text-decoration: underline;
 }
 nav {
-    font-family: Lato, Helvetica, Arial, sans-serif;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
 }
 nav ul {
     padding-left: 0;
